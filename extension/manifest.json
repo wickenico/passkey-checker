@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Passkey Check",
+  "version": "1.0",
+  "description": "Erkenne automatisch, ob eine Seite Passkeys unterstützt",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Passkey Check",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
