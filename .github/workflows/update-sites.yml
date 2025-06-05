@@ -1,11 +1,12 @@
 name: Update Passkey Domains
 
 on:
-  permissions:
-    contents: write 
+  push:
+    branches:
+      - main 
   schedule:
     - cron: '0 2 * * *'  # täglich um 2 Uhr (UTC)
-  workflow_dispatch:      # manuelles Auslösen möglich
+  workflow_dispatch:     
 
 jobs:
   scrape:
