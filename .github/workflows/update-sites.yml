@@ -33,8 +33,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "wickenico"
+          git config user.email "nico.wickersheim@yahoo.de"
           git add scraper/sites.json
           git commit -m "Update sites.json [auto]" || echo "No changes"
 
