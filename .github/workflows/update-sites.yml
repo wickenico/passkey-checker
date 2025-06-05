@@ -2,7 +2,7 @@ name: Update Passkey Domains
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # täglich um 2 Uhr morgens
+    - cron: '0 2 * * *'  # täglich um 2 Uhr (UTC)
   workflow_dispatch:      # manuelles Auslösen möglich
 
 jobs:
@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
+        working-directory: ./scraper
         with:
           node-version: '20'
 
