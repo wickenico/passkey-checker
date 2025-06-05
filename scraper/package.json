@@ -1,8 +1,15 @@
 {
-  "name": "passkey-scraper",
+  "name": "passkey-checker-scraper",
   "version": "1.0.0",
+  "description": "Scraper for Passkey domains",
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12"
+    "puppeteer": "^24.10.0"
   }
 }
