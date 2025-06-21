@@ -3,18 +3,18 @@
 
   try {
     const res = await fetch("https://raw.githubusercontent.com/wickenico/passkey-checker/main/scraper/sites.json");
-    if (!res.ok) throw new Error("Fehler beim Laden der Passkey-Domainliste");
+    if (!res.ok) throw new Error("Fehler beim Laden der Passkey-Domainliste.");
 
     const knownPasskeySites = await res.json();
 
     if (knownPasskeySites[domain]) {
-      showPopover("✅ Diese Seite unterstützt laut passkeys.directory Passkeys");
+      showPopover("✅ Diese Seite unterstützt Passkeys.");
     } else {
-      showPopover("ℹ️ Keine bekannte Passkey-Unterstützung laut passkeys.directory");
+      showPopover("ℹ️ Keine bekannte Passkey-Unterstützung laut passkeys.directory.");
     }
   } catch (e) {
     console.error(e);
-    showPopover("⚠️ Fehler beim Laden der Passkey-Liste");
+    showPopover("⚠️ Fehler beim Laden der Passkey-Liste.");
   }
 
   function showPopover(text) {
