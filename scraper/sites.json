@@ -1,5 +1,4 @@
 {
-  "passage.1password.com": true,
   "1password.com": true,
   "docs.google.com": true,
   "adobe.com": true,
@@ -140,6 +139,7 @@
   "paidy.com": true,
   "papermark.io": true,
   "passage.id": true,
+  "passage.1password.com": true,
   "pastery.net": true,
   "payfit.com": true,
   "paypal.com": true,
